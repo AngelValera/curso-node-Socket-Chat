@@ -1,9 +1,10 @@
-# Notas:
+# Socket-Chat:
 
-Este es un pequeño servidor de express listo para ejecutarse y servir la carpeta public en la web.
+[![Language](https://img.shields.io/badge/node.js%20-%2343853D.svg?&logo=node.js&logoColor=white)](https://nodejs.org/es/)
 
-Recuerden que deben de reconstruir los módulos de node con el comando
+Otra aplicación del [curso de Node](https://www.udemy.com/course/node-de-cero-a-experto/).
 
-```
-npm install
-```
+En este caso, se trata de una aplicación de chat sencilla.
+
+
+Recuerden que se debe ejecutar ```npm install ``` para reconstruir los módulos de Node.
