@@ -17,7 +17,6 @@ io.on("connection", (client) => {
 			data.nombre,
 			data.sala,
 		);
-
 		client.join(data.sala);
 
 		client.broadcast
@@ -48,7 +47,7 @@ io.on("connection", (client) => {
 		let persona = usuarios.getPersona(client.id);
 
 		let mensaje = crearMensaje(persona.nombre, data.mensaje);
-		client.broadcast.emit("crearMensaje", mensaje);
+		client.broadcast.to(persona.sala).emit("crearMensaje", mensaje);
 	});
 
 	// Mensajes Privados
