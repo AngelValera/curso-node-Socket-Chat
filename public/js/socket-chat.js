@@ -20,8 +20,11 @@ socket.on("connect", function () {
 	console.log("Conectado al servidor");
 
 	socket.emit("entraChat", usuario, (resp) => {
-		//console.log("Usuarios conectados", resp);
-		renderizarUsuarios(resp);
+		if (!resp.error) {
+			renderizarUsuarios(resp.result);
+		} else {
+			console.log(resp.result);
+		}
 	});
 });
 
