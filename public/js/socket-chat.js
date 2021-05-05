@@ -19,11 +19,11 @@ var usuario = {
 socket.on("connect", function () {
 	console.log("Conectado al servidor");
 
-	socket.emit("entraChat", usuario, (resp) => {
-		if (!resp.error) {
-			renderizarUsuarios(resp.result);
+	socket.emit("entraChat", usuario, ({ error, result }) => {
+		if (!error) {
+			renderizarUsuarios(result);
 		} else {
-			console.log(resp.result);
+			console.log(result);
 		}
 	});
 });
